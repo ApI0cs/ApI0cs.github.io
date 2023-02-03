@@ -7,7 +7,7 @@ let discordUserId = "1066387501108969582"
 let failbackProfileImage = "https://cdn.discordapp.com/attachments/1067405999780147201/1071051641563918396/a5e21b2a1f89e6134d22c639fe5c6c96.png"
 
 // 볼륨
-let volume = 0.15
+let volume = 0.1
 
 // 설정부분 끝
 
