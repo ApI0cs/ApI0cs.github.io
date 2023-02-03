@@ -37,6 +37,7 @@ let discordName = false
 async function discordMain() {
     const profilePictureImage = document.getElementById("profile-picture")
     const profileStatus = document.getElementById("profile-status")
+    const profileStatusHoverText = document.getElementById("profile-status-hovertext")
     const profileName = document.getElementById("profile-name")
     const profileTag = document.getElementById("profile-tag")
     const discordButton = document.getElementById("discord-button")
@@ -54,6 +55,13 @@ async function discordMain() {
         if (discordData) {
             // 상태
             profileStatus.setAttribute("status",discordData.discord_status)
+            profileStatusHoverText.textContent = (
+                discordData.discord_status == "dnd"     ? "방해 금지모드" :
+                discordData.discord_status == "online"  ? "온라인" :
+                discordData.discord_status == "idle"    ? "자리비움" :
+                discordData.discord_status == "offline" ? "오프라인" :
+                "알 수 없음"
+            )
 
             let user = discordData.discord_user
             if (user) {
@@ -83,3 +91,25 @@ async function discordMain() {
     }
 }
 discordMain()
+
+function handleHovertext() {
+    let hoverItem = document.querySelector(".hover-item")
+    let hoverItemText = hoverItem.querySelector(".hover-text")
+    document.querySelectorAll(".hover-parent").forEach(hoverParent=>{
+        let text = hoverParent.querySelector(".hover-text")
+        hoverParent.addEventListener("mousemove",event=>{
+            event = event || window.event
+            hoverItem.style.left = event.pageX+12+"px"
+            hoverItem.style.top = event.pageY+12+"px"
+        })
+        hoverParent.addEventListener("mouseover",()=>{
+            hoverItemText.textContent = text.textContent
+            hoverItem.classList.add("hover-onhover")
+        })
+        hoverParent.addEventListener("mouseout",()=>{
+            hoverItemText.textContent = text.textContent
+            hoverItem.classList.remove("hover-onhover")
+        })
+    })
+}
+handleHovertext()

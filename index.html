@@ -15,6 +15,12 @@
       </div>
     </div>
 
+    <!-- 호버텍스트 -->
+    <div class="hover-item">
+      <p class="hover-text">
+      </p>
+    </div>
+
     <!-- 페이지 -->
     <div id="holder">
       <div id="placeholder"></div>
@@ -22,7 +28,9 @@
       <div id="profile">
         <div id="profile-picture-holder">
           <img id="profile-picture" src="" alt="User's Profile Picture">
-          <div id="profile-status"></div>
+          <div id="profile-status" class="hover-parent">
+            <p class="hover-text">디스코드 상태 (<span id="profile-status-hovertext"></span>)</p>
+          </div>
         </div>
         <div id="profile-name-holder">
           <p id="profile-name"></p>
