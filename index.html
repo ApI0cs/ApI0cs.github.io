@@ -5,14 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helmet</title>
+    <link href="audio.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
-    <!-- 배경음 -->
-    <audio id="bgm" autoplay loop>
-      <source src="assets/music.mp3" type="audio/mp3">
-    </audio>
-
     <!-- 바닥 팝업 -->
     <div id="snakbar-holder">
       <div id="snakbar" class="window">
@@ -56,6 +52,35 @@
 2환하고 1시간정도 공백은 밥먹느라 생긴 공백임돠 (밥은 못참지~)
           </p>
         </div>
+
+        <!-- 배경음 -->
+        <div class="audio-player" id="bgm">
+          <div class="timeline">
+            <div class="progress"></div>
+          </div>
+          <div class="controls">
+            <div class="play-container">
+              <div class="toggle-play play">
+            </div>
+            </div>
+            <div class="time">
+              <div class="current">0:00</div>
+              <div class="divider">/</div>
+              <div class="length"></div>
+            </div>
+            <div class="name">사이트 배경음악</div>
+            <div class="volume-container">
+              <div class="volume-button">
+                <div class="volume icono-volumeMedium"></div>
+              </div>
+
+              <div class="volume-slider">
+                <div class="volume-percentage"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- 링크 버튼들 -->
         <div class="button-holder">
           <div class="button" id="discord-button">
@@ -133,5 +158,6 @@
     <!-- 디밍 오버레이 -->
     <div id="overlay"></div>
     <script src="./index.js"></script>
+    <script src="./audio.js"></script>
   </body>
 </html>

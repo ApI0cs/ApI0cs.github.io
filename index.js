@@ -6,16 +6,9 @@ let discordUserId = "1066387501108969582"
 // failback image (디스코드 서버 터지면 보여줄 사진)
 let failbackProfileImage = "https://cdn.discordapp.com/attachments/1067405999780147201/1071051641563918396/a5e21b2a1f89e6134d22c639fe5c6c96.png"
 
-// 볼륨
-let volume = 0.1
-
 // 설정부분 끝
 
 
-
-// 볼륨설정
-let audio = document.getElementById("bgm");
-audio.volume = volume;
 
 // fetch function
 async function fetchAsync (url) {

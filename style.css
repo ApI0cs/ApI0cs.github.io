@@ -48,14 +48,14 @@
 }
 
 @font-face {
-  font-family: 'Cafe24Ssurround';
+  font-family: 'SiteFont';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 *{
   /* 폰트 */
-  font-family: 'Cafe24Ssurround';
+  font-family: 'SiteFont';
 }
 
 /* 설정부분 끝 */
@@ -309,7 +309,9 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
   /* align-items: center; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 20px;
+  margin-top: 16px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
 }
 @media only screen and (max-width: 600px) {
   /* 모바일 */
@@ -332,7 +334,6 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
   border: rgba(255,255,255,0.19) solid 1px;
   background-color: #ffffff09;
   height: 60px;
-  margin: 8px;
   border-radius: 12px;
   box-shadow: rgba(0,0,0,0.36) 0px 0px 12px 0px;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
@@ -411,4 +412,9 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
 }
 .hover-item.hover-onhover {
   display: flex;
+}
+
+/* 배경음 컨트롤 */
+#bgm {
+  margin: 22px 0px 0px 0px;
 }
