@@ -285,7 +285,7 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
   position: relative;
   padding: 30px 30px 0px 30px;
   height: max-content;
-  min-height: calc(80% - var(--profileRegionHeight) - 30px);
+  min-height: calc(100% - var(--profileRegionHeight) - 30px - var(--topPadding));
   background-color: #1C1F20;
   border-radius: 24px 24px 0px 0px;
   box-shadow: rgba(0,0,0,0.6) 0px 0px 22px 0px;
