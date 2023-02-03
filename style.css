@@ -1,0 +1,203 @@
+/* 설정부분 */
+
+:root {
+  /* 배경 사진 url (디스코드 첨부파일 url 가져다 넣으면 됨) */
+  --backgroundImageURL: url("https://cdn.discordapp.com/attachments/1047788115617652768/1071028472895512646/QHD_-1.jpg");
+  /* 배경그라이던트 (rgb + 투명도) */
+  --background-gradient: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8));
+
+  /* 프로파일 영역 높이 */
+  --profileRegionHeight: 260px;
+  /* 프로파일 영역 너비 */
+  --profileRegionWidth: 700px;
+  /* 프로파일 영역 padding (좌우) */
+  --profilePaddingX: 90px;
+  /* 프로필 사진 크기 */
+  --profilePictureSize: 160px;
+  /* 프로필 이름 크기 */
+  --profileNameSize: 2.4em;
+  /* 프로필 태그 크기 */
+  --profileTagSize: 1.4em;
+  /* 프로필 위쪽 여백 */
+  --profileTagMarginTop: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* 모바일 모드에서 설정값 */
+  :root {
+    /* 프로파일 영역 높이 */
+    --profileRegionHeight: 190px;
+    /* 프로파일 영역 너비 */
+    --profileRegionWidth: 100%;
+    /* 프로파일 영역 padding (좌우) */
+    --profilePaddingX: 40px;
+    /* 프로필 사진 크기 */
+    --profilePictureSize: 130px;
+    /* 프로필 이름 크기 */
+    --profileNameSize: 1.5em;
+    /* 프로필 태그 크기 */
+    --profileTagSize: 1em;
+    /* 프로필 위쪽 여백 */
+    --profileTagMarginTop: 8px;
+  }
+}
+
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  /* 폰트 */
+  font-family: 'Cafe24Ssurround';
+}
+
+/* 설정부분 끝 */
+
+
+
+/* 기본 엘리멘트 */
+body, html {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+body {
+  background: #171717 var(--backgroundImageURL) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+* { margin: 0px; padding: 0px; overflow: auto; }
+
+/* 배경 그라이던트 */
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background: var(--background-gradient);
+  z-index: -1;
+}
+
+/* 프사영역 */
+#profile {
+  height: var(--profileRegionHeight);
+}
+
+/* 프사 텍스트 */
+#profile-name-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  margin-left: 12px;
+  width: calc(100% - var(--profilePictureSize));
+}
+#profile-name {
+  transition: font-size cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+  color: white;
+  font-size: var(--profileNameSize);
+  font-weight: bolder;
+  margin: 0;
+}
+#profile-tag {
+  transition: font-size cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+  margin: var(--profileTagMarginTop) 0px 0px 8px;
+  font-size: var(--profileTagSize);
+  font-weight: bold;
+  color: rgb(175, 175, 175);
+}
+#profile {
+  padding: 0px var(--profilePaddingX);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: var(--profileRegionHeight);
+}
+
+/* 프사이미지 + 상태인디케이터 */
+#profile-picture {
+  transition:
+    width cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s,
+    height cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+  margin: 16px 0px 12px 0px;
+  width: var(--profilePictureSize);
+  height: var(--profilePictureSize);
+  border-radius: 100%;
+  box-shadow: 0px 0px 32px -6px rgba(0, 0, 0, 0.8);
+}
+#profile-picture-holder {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#profile-picture-status {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  opacity: 0.9;
+  background-color: #589bff;
+  margin: 18px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 18px -4px rgba(0, 0, 0, 0.8);
+}
+
+/* 설명란 */
+#introduce {
+  color: white;
+  font-size: 1em;
+}
+#introduce-holder {
+  margin: 16px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* 토스트 */
+#snakbar {
+
+}
+
+/* 페이지 홀더 */
+#holder {
+  width: var(--profileRegionWidth);
+  height: 100%;
+}
+#placeholder {
+  height: 20%;
+  transition: height cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+}
+@media only screen and (max-width: 600px) {
+  /* 모바일 */
+  #placeholder {
+    height: 0px;
+  }
+}
+
+/* 메인프레임 */
+#main-frame {
+  margin: 0 12px;
+  transition: border-radius cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+  position: relative;
+  padding: 0px 22px;
+  height: max-content;
+  min-height: calc(80% - var(--profileRegionHeight));
+  background-color: #1C1F20;
+  border-radius: 24px 24px 0px 0px;
+  box-shadow: rgba(0,0,0,0.6) 0px 0px 22px 0px;
+}
+@media only screen and (max-width: 600px) {
+  /* 모바일 */
+  #main-frame {
+    margin: 0 0px;
+    min-height: calc(100% - var(--profileRegionHeight));
+    border-radius: 0px;
+  }
+}
