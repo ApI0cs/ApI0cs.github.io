@@ -39,7 +39,7 @@ async function discordMain() {
     const profileStatus = document.getElementById("profile-status")
     const profileName = document.getElementById("profile-name")
     const profileTag = document.getElementById("profile-tag")
-    const discordButton = document.querySelector("discord-button")
+    const discordButton = document.getElementById("discord-button")
     
     function failback() {
         console.log("Failed to loading user information from discord api! try to set user data with default data (FAILBACK)")
