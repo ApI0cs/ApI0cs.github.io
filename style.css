@@ -79,6 +79,29 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
   text-decoration: none;
 }
 
+/* 스크롤바 */
+/*Custom scrollbar*/
+*::-webkit-scrollbar { /* total width */
+  background-color:transparent;
+  width:6px;
+}
+*::-webkit-scrollbar-track { /* scrollbar background */
+  background-color:transparent;
+}
+*::-webkit-scrollbar-track:hover {
+  background-color:transparent;
+}
+*::-webkit-scrollbar-thumb { /* scrollbar itself */
+  background-color:rgba(255, 255, 255, 0.26);
+  border-radius:16px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color:rgba(216, 216, 216, 0.55);
+}
+*::-webkit-scrollbar-button { /* scroll button */
+  display:none
+}
+
 /* 배경 그라이던트 */
 #overlay {
   position: absolute;
