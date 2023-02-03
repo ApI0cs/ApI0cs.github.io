@@ -5,6 +5,8 @@
   --backgroundImageURL: url("https://cdn.discordapp.com/attachments/1047788115617652768/1071028472895512646/QHD_-1.jpg");
   /* 배경그라이던트 (rgb + 투명도) */
   --background-gradient: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8));
+  /* 위쪽 여벽 최대치 */
+  --topPadding: 12%;
 
   /* 프로파일 영역 높이 */
   --profileRegionHeight: 260px;
@@ -257,7 +259,7 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
   height: 100%;
 }
 #placeholder {
-  height: 20%;
+  height: var(--topPadding);
   transition: height cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
 }
 #bottom-placeholder { height: 30px; }
@@ -416,5 +418,5 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
 
 /* 배경음 컨트롤 */
 #bgm {
-  margin: 22px 0px 0px 0px;
+  margin: 16px 0px 0px 0px;
 }
