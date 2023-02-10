@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helmet</title>
     <link href="audio.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <!-- 바닥 팝업 -->
@@ -43,39 +43,42 @@
         <!-- 메인텍스트 -->
         <div id="introduce-holder">
           <p id="introduce">
-남자임<br>
-사진들 다 핀터에서 가져온거고 그냥 프사 이뻐서 해논겁니다 아무런 이유 없음<br>
-요즘 데바데에 빠져사는 중(같이 할 분 친추 ㄱㄱ)<br>
-<br>
-데바데 하면 또 3환 50랩까지 4시간도 안 걸렸는데 핵아니냐 하시는 분들 있는데<br>
-다른 캐릭터들 다 50까지 키웠다가 초기화 당해서 블포 복구받은걸로 한 캐릭터 바로 3환 50찍은 거고<br>
-2환하고 1시간정도 공백은 밥먹느라 생긴 공백임돠 (밥은 못참지~)
+            룩딸에 진심인 편 (프필 자주 바뀜)<br>
+            INTP랑 ISTP 사이의 어딘가<br>
+            게임 실력은 처참한 편
           </p>
         </div>
 
         <!-- 배경음 -->
         <div class="audio-player" id="bgm">
-          <div class="timeline">
-            <div class="progress"></div>
+          <div id="music-cover-holder">
+            <div id="music-cover">
+              <img src="assets/cover-blur.png" alt="" id="cover-blur">
+              <img src="assets/disk.png" alt="" id="disk">
+              <img src="assets/cover.png" alt="" id="cover">
+            </div>
           </div>
           <div class="controls">
-            <div class="play-container">
-              <div class="toggle-play play">
+            <div class="name">
+              사이트 배경음악
             </div>
+            <div class="timeline">
+              <div class="progress"></div>
             </div>
-            <div class="time">
-              <div class="current">0:00</div>
-              <div class="divider">/</div>
-              <div class="length"></div>
-            </div>
-            <div class="name">사이트 배경음악</div>
-            <div class="volume-container">
-              <div class="volume-button">
-                <div class="volume icono-volumeMedium"></div>
+            <div class="buttons">
+              <div class="play-container">
+                <div class="toggle-play play"></div>
               </div>
-
-              <div class="volume-slider">
-                <div class="volume-percentage"></div>
+              <div class="time">
+                <div class="current">0:00</div>
+                <div class="divider">/</div>
+                <div class="length"></div>
+              </div>
+              <div class="volume-container">
+                <i class="volume-button fa fa-volume-up"></i>
+                <div class="volume-slider">
+                  <div class="volume-percentage"></div>
+                </div>
               </div>
             </div>
           </div>

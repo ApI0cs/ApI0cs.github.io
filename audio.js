@@ -16,7 +16,7 @@ audio.addEventListener(
     audioPlayer.querySelector(".time .length").textContent = getTimeCodeFromNum(
       audio.duration
     );
-    audio.volume = .029;
+    audio.volume = .4;
     audio.loop = true;
   },
   false
@@ -68,14 +68,8 @@ playBtn.addEventListener(
 
 audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
   const volumeEl = audioPlayer.querySelector(".volume-container .volume");
-  audio.muted = !audio.muted;
-  if (audio.muted) {
-    volumeEl.classList.remove("icono-volumeMedium");
-    volumeEl.classList.add("icono-volumeMute");
-  } else {
-    volumeEl.classList.add("icono-volumeMedium");
-    volumeEl.classList.remove("icono-volumeMute");
-  }
+  audio.volume = 0;
+  audioPlayer.querySelector(".controls .volume-percentage").style.width = '0%';
 });
 
 //turn 128 seconds into 2:08
