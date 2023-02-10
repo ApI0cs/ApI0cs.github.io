@@ -123,7 +123,9 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
 
 /* 프사 텍스트 */
 #profile-name-holder {
+  padding-top: 12px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0px;
@@ -150,6 +152,10 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
   justify-content: start;
   align-items: center;
   height: var(--profileRegionHeight);
+}
+#profile-names {
+  display: flex;
+  flex-direction: row;
 }
 
 /* 프사이미지 + 상태인디케이터 */
@@ -206,13 +212,19 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
 
 /* 설명란 */
 #introduce {
-  color: white;
+  color: rgba(255,255,255,0.8);
   font-size: 1em;
+  margin-top: 4px;
 }
 #introduce-holder {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 500px) {
+  #introduce {
+    font-size: 0.7em;
+  }
 }
 
 /* 바닥 팝업 */
@@ -356,7 +368,7 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
   color: white;
 }
 .button p { /* 버튼 글자 좌우 여백 */
-  margin: 0px 10px;
+  margin: 0px 10px 0px 10px;
   font-size: 1.1rem;
   line-height: 24px;
   color: white;
@@ -416,7 +428,11 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
   display: flex;
 }
 
-/* 배경음 컨트롤 */
-#bgm {
-  margin: 16px 0px 0px 0px;
+/* 출처? */
+#from-pinterest {
+  width: 100%;
+  text-align: center;
+  color: white;
+  opacity: 0.6;
+  font-size: 12px;
 }
