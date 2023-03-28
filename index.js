@@ -46,7 +46,7 @@ async function discordMain() {
         console.log("Failed to loading user information from discord api! try to set user data with default data (FAILBACK)")
         profileStatus.setAttribute("status","none")
         profilePictureImage.setAttribute("src",failbackProfileImage)
-        profileName.textContent = "JIHOO"
+        profileName.textContent = "Helmet"
     }
 
     try {
