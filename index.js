@@ -72,11 +72,11 @@ async function discordMain() {
                 )
 
                 // 이름설정
-                profileName.textContent = user.username
+                profileName.textContent = user.discordName
 
                 // 클립보드에 이름 복사
                 if (discordButton) {
-                    discordName = `${user.username}#${user.discriminator}`
+                    discordName = `${user.username}`
                     discordButton.addEventListener('click',()=>{
                         navigator.clipboard.writeText(discordName)
                         showSnakbar("클립보드에 복사됨 ^o^")
