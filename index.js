@@ -72,7 +72,7 @@ async function discordMain() {
                 )
 
                 // 이름설정
-                profileName.textContent = user.displayname
+                profileName.textContent = user.username
 
                 // 클립보드에 이름 복사
                 if (discordButton) {
