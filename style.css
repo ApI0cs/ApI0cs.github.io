@@ -193,7 +193,7 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
   position: absolute;
   opacity: 0.9;
   background-color: #589bff;
-  margin: 18px;
+  margin: 10px;
   border-radius: 100%;
   box-shadow: 0px 0px 18px -4px rgba(0, 0, 0, 0.8);
 }
