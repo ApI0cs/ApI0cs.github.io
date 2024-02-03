@@ -13,7 +13,7 @@
   /* 프로파일 영역 너비 */
   --profileRegionWidth: 700px;
   /* 프로파일 영역 padding (좌우) */
-  --profilePaddingX: 90px;
+  --profilePaddingX: 50px;
   /* 프로필 사진 크기 */
   --profilePictureSize: 160px;
   /* 프로필 이름 크기 */
