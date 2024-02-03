@@ -117,7 +117,7 @@ a { /* 링크 넣으면 밑줄 넣는거 없에기 */
 
 /* 프사영역 */
 #profile {
-  transition: height cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+  transition: height cubic-bezier(0.200, 0.84, 0.44, 1) 0.3s;
   height: var(--profileRegionHeight);
 }
 
