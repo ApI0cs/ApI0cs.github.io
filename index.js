@@ -44,36 +44,7 @@ async function discordMain() {
     
     function failback() {
         console.log("Failed to loading user information from discord api! try to set user data with default data (FAILBACK)")
-        profileStatus.setAttribute("status","none")
-        profilePictureImage.setAttribute("src",failbackProfileImage)
-        profileName.textContent = "Jvcky"
-    }
-
-    try {
-        let discordData = (await fetchAsync(`https://api.lanyard.rest/v1/users/${discordUserId}`))?.data
-        // console.log(discordData)
-        if (discordData) {
-            // 상태
-            profileStatus.setAttribute("status",discordData.discord_status)
-            profileStatusHoverText.textContent = (
-                discordData.discord_status == "dnd"     ? "방해 금지모드" :
-                discordData.discord_status == "online"  ? "온라인" :
-                discordData.discord_status == "idle"    ? "자리비움" :
-                discordData.discord_status == "offline" ? "오프라인" :
-                "알 수 없음"
-            )
-
-            let user = discordData.discord_user
-            if (user) {
-                // 프로필 이미지 설정
-                let avatar = user.avatar
-                profilePictureImage.setAttribute("src",
-                    `https://cdn.discordapp.com/avatars/${discordUserId}/${avatar}.${avatar.startsWith("a_") ? "gif" : "png"}?size=2048`
-                )
-
-                // 이름설정
-                profileName.textContent = "Jvcky"
-                #user.username하면디스코드아이디로표시됨
+        profileStatus.setAttribute("status","n됨
 
                 // 클립보드에 이름 복사
                 if (discordButton) {
