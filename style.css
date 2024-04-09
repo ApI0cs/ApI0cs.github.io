@@ -2,8 +2,7 @@
 
 :root {
   /* 배경 사진 url (디스코드 첨부파일 url 가져다 넣으면 됨) */
-  --backgroundImageURL: src="assets/background" 
-  /* url("https://cdn.discordapp.com/attachments/1077112525700730971/1217043982429851699/QHD_-1.jpg?ex=66278188&is=66150c88&hm=ba38aa7f7f2cc6df05f58897bada42eaaa15915e3c616abca5af89fbc21253b5&");
+  --backgroundImageURL:url("assets/background");
     
   /* 배경그라이던트 (rgb + 투명도) */
   --background-gradient: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8));
