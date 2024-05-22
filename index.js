@@ -1,7 +1,7 @@
 // 설정부분
 
 // 디스코드 유저 아이디 적는곳
-let discordUserId = "1077078705370824805"
+let discordUserId = "159005832661565440"
 
 // failback image (디스코드 서버 터지면 보여줄 사진)
 let failbackProfileImage = "https://cdn.discordapp.com/attachments/1077112525700730971/1201765654227853384/f92f8db81f095abb5d32bfa4193ea9bb.jpg?ex=65cb027b&is=65b88d7b&hm=a88f09e5087076c393e8cc991c2e267fec6edd816c01d15c123d20048dc147cc&"
