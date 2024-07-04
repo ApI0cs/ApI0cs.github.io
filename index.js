@@ -72,7 +72,7 @@ async function discordMain() {
                 )
 
                 // 이름설정
-                profileName.textContent = "도해원"
+                profileName.textContent = "cityfunk"
                     //user.username로 작성시 디스코드 아이디가 표시됨
 
                 // 클립보드에 이름 복사
